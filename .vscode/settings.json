@@ -1,4 +1,5 @@
 {
+    "dotnet.autoInsert.enableAutoInsert": false,
     "files.exclude": {
         "**/.DS_Store": true,
         "**/.git": true,
