@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 246189112}
   - component: {fileID: 246189111}
   m_Layer: 0
-  m_Name: Cubo
+  m_Name: TriggerCubo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
