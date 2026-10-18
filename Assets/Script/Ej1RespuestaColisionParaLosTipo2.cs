@@ -20,6 +20,9 @@ public class Ej1RespuestaColisionParaLosTipo2 : MonoBehaviour
         if (!target) {
             Debug.LogError(name + ": ¡No se ha asignado un GameObject objetivo al que moverse!");
         }
+        if (!CompareTag("Tipo2")) {
+            Debug.LogError(name + ": ¡Este objeto debe tener asignada la etiqueta 'Tipo2'!");
+        }
         receivedMessage = false;
 
         myRigidbody = GetComponent<Rigidbody>();
@@ -40,6 +43,9 @@ public class Ej1RespuestaColisionParaLosTipo2 : MonoBehaviour
     }
 
     void FixedUpdate() {
+        if (!myRigidbody) {
+            return;
+        }
         myRigidbody.MovePosition(transform.position + movementDirection);
     }
 

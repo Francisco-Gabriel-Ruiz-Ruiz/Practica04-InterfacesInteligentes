@@ -3,7 +3,7 @@ using UnityEngine;
 public class Ej1RespuestaColisionParaLosTipo1 : MonoBehaviour
 {
     public float speed = 1f;
-    public GameObject sphereTipo2Target;
+    public GameObject objectTipo2Target;
 
     public Ej1NotificadorColision notificador;
 
@@ -17,9 +17,13 @@ public class Ej1RespuestaColisionParaLosTipo1 : MonoBehaviour
         } else {
             notificador.OnTriggerWithTarget += ActivateMovementTowardsTipo2Sphere;
         }
-        if (!sphereTipo2Target || !sphereTipo2Target.CompareTag("Tipo2")) {
-            Debug.LogError(name + ": ¡No se ha asignado una esfera objetivo con la etiqueta 'Tipo 2'!");
+        if (!objectTipo2Target || !objectTipo2Target.CompareTag("Tipo2")) {
+            Debug.LogError(name + ": ¡No se ha asignado un GameObject objetivo con la etiqueta 'Tipo2'!");
         }
+        if (!CompareTag("Tipo1")) {
+            Debug.LogError(name + ": ¡Este objeto debe tener asignada la etiqueta 'Tipo1'!");
+        }
+        receivedMessage = false;
 
         myRigidbody = GetComponent<Rigidbody>();
         if (!myRigidbody || !myRigidbody.isKinematic) {
@@ -32,12 +36,15 @@ public class Ej1RespuestaColisionParaLosTipo1 : MonoBehaviour
 
     void Update() {
         if (receivedMessage) {
-            movementDirection = sphereTipo2Target.transform.position -  transform.position;
+            movementDirection = objectTipo2Target.transform.position -  transform.position;
             movementDirection = movementDirection.normalized * speed * Time.fixedDeltaTime;
         }
     }
 
     void FixedUpdate() {
+        if (!myRigidbody) {
+            return;
+        }
         myRigidbody.MovePosition(transform.position + movementDirection);
     }
 
