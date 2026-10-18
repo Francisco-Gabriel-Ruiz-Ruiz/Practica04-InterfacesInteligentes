@@ -168,7 +168,7 @@ MonoBehaviour:
   shieldPersecutionSpeed: 1
   targetObject: {fileID: 4033469148352625385}
   notificadorColisionPlayer: {fileID: 7218710618913652321}
-  notificadorCaja: {fileID: 1271566509}
+  notificadorCaja: {fileID: 7218710618913652324}
 --- !u!114 &7439485
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -182,7 +182,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Ej4RespuestaAproximacionCajaHumanoideTipo2
   lookTarget: {fileID: 1271566503}
-  notificadorCajaAproximacion: {fileID: 1271566510}
+  notificadorCajaAproximacion: {fileID: 7218710618913652323}
 --- !u!4 &16862211 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8912869530358756836, guid: ca310162f6d65ee4a85cf9136228aa6e, type: 3}
@@ -788,7 +788,7 @@ PrefabInstance:
     - target: {fileID: 4227409833005550698, guid: 4e3fc0e01ffe45b4ca07b08da2ad8d7e, type: 3}
       propertyPath: notificadorCaja
       value: 
-      objectReference: {fileID: 1271566509}
+      objectReference: {fileID: 7218710618913652324}
     - target: {fileID: 4227409833005550698, guid: 4e3fc0e01ffe45b4ca07b08da2ad8d7e, type: 3}
       propertyPath: objectTipo2Target
       value: 
@@ -812,7 +812,7 @@ PrefabInstance:
     - target: {fileID: 7870041013147973636, guid: 4e3fc0e01ffe45b4ca07b08da2ad8d7e, type: 3}
       propertyPath: notificadorCajaAproximacion
       value: 
-      objectReference: {fileID: 1271566510}
+      objectReference: {fileID: 7218710618913652323}
     - target: {fileID: 9178550293571186874, guid: 4e3fc0e01ffe45b4ca07b08da2ad8d7e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.5135193
@@ -1782,10 +1782,8 @@ GameObject:
   - component: {fileID: 1271566506}
   - component: {fileID: 1271566505}
   - component: {fileID: 1271566504}
-  - component: {fileID: 1271566509}
-  - component: {fileID: 1271566510}
   m_Layer: 0
-  m_Name: CajaNotificadora
+  m_Name: Caja
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1911,32 +1909,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: -30, y: -35.264, z: -35.264}
---- !u!114 &1271566509
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1271566503}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 32d9f4ccb3c507046980c6acd35464a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Ej3NotificadorCaja
---- !u!114 &1271566510
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1271566503}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2c7bbbc71fc5a347880bf11e25955ce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Ej4NotificadorCajaAproximacion
-  approximationTarget: {fileID: 4033469148352625385}
-  distanceLimit: 4
 --- !u!1001 &1273982566
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2416,6 +2388,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2353529770621969517, guid: 7ee3f2e3605d53b458e47b540ccf260b, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3410218513504164153, guid: 7ee3f2e3605d53b458e47b540ccf260b, type: 3}
       propertyPath: target
       value: 
@@ -3147,6 +3123,12 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 7875899379139359416, guid: 6978135021bb155488cbf2b2f47e2df4, type: 3}
       insertIndex: -1
+      addedObject: {fileID: 7218710618913652324}
+    - targetCorrespondingSourceObject: {fileID: 7875899379139359416, guid: 6978135021bb155488cbf2b2f47e2df4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7218710618913652323}
+    - targetCorrespondingSourceObject: {fileID: 7875899379139359416, guid: 6978135021bb155488cbf2b2f47e2df4, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 7218710618913652322}
   m_SourcePrefab: {fileID: 100100000, guid: 6978135021bb155488cbf2b2f47e2df4, type: 3}
 --- !u!1001 &2327500741879150615
@@ -3334,7 +3316,7 @@ PrefabInstance:
     - target: {fileID: 3734627813454183325, guid: 4b6de45456a69a341ba6fa158cc2c3d5, type: 3}
       propertyPath: notificadorCaja
       value: 
-      objectReference: {fileID: 1271566509}
+      objectReference: {fileID: 7218710618913652324}
     - target: {fileID: 3734627813454183325, guid: 4b6de45456a69a341ba6fa158cc2c3d5, type: 3}
       propertyPath: notificadorColisionPlayer
       value: 
@@ -3346,7 +3328,7 @@ PrefabInstance:
     - target: {fileID: 5074813486725481782, guid: 4b6de45456a69a341ba6fa158cc2c3d5, type: 3}
       propertyPath: notificadorCajaAproximacion
       value: 
-      objectReference: {fileID: 1271566510}
+      objectReference: {fileID: 7218710618913652323}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3363,7 +3345,7 @@ PrefabInstance:
     - target: {fileID: 4227409833005550698, guid: 4e3fc0e01ffe45b4ca07b08da2ad8d7e, type: 3}
       propertyPath: notificadorCaja
       value: 
-      objectReference: {fileID: 1271566509}
+      objectReference: {fileID: 7218710618913652324}
     - target: {fileID: 4227409833005550698, guid: 4e3fc0e01ffe45b4ca07b08da2ad8d7e, type: 3}
       propertyPath: objectTipo2Target
       value: 
@@ -3387,7 +3369,7 @@ PrefabInstance:
     - target: {fileID: 7870041013147973636, guid: 4e3fc0e01ffe45b4ca07b08da2ad8d7e, type: 3}
       propertyPath: notificadorCajaAproximacion
       value: 
-      objectReference: {fileID: 1271566510}
+      objectReference: {fileID: 7218710618913652323}
     - target: {fileID: 9178550293571186874, guid: 4e3fc0e01ffe45b4ca07b08da2ad8d7e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 9.986481
@@ -3454,7 +3436,7 @@ PrefabInstance:
     - target: {fileID: 4227409833005550698, guid: 4e3fc0e01ffe45b4ca07b08da2ad8d7e, type: 3}
       propertyPath: notificadorCaja
       value: 
-      objectReference: {fileID: 1271566509}
+      objectReference: {fileID: 7218710618913652324}
     - target: {fileID: 4227409833005550698, guid: 4e3fc0e01ffe45b4ca07b08da2ad8d7e, type: 3}
       propertyPath: objectTipo2Target
       value: 
@@ -3478,7 +3460,7 @@ PrefabInstance:
     - target: {fileID: 7870041013147973636, guid: 4e3fc0e01ffe45b4ca07b08da2ad8d7e, type: 3}
       propertyPath: notificadorCajaAproximacion
       value: 
-      objectReference: {fileID: 1271566510}
+      objectReference: {fileID: 7218710618913652323}
     - target: {fileID: 9178550293571186874, guid: 4e3fc0e01ffe45b4ca07b08da2ad8d7e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.98648
@@ -3618,6 +3600,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Ej6PuntosPlayer
   destroyOnCollect: 0
   pointsText: {fileID: 273527535}
+--- !u!114 &7218710618913652323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4033469148352625385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2c7bbbc71fc5a347880bf11e25955ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Ej4NotificadorCajaAproximacion
+  approximationTarget: {fileID: 1271566503}
+  distanceLimit: 4
+--- !u!114 &7218710618913652324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4033469148352625385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32d9f4ccb3c507046980c6acd35464a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Ej3NotificadorCajaTiposHumanoides
 --- !u!1001 &7840204466073707283
 PrefabInstance:
   m_ObjectHideFlags: 0

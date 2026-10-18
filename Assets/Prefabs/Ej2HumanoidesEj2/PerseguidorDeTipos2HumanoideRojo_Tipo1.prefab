@@ -344,7 +344,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Ej1RespuestaColisionEsferaTipo1
   speed: 1
-  sphereTipo2Target: {fileID: 0}
+  objectTipo2Target: {fileID: 0}
   notificador: {fileID: 0}
 --- !u!1 &2881999736332117348
 GameObject:
