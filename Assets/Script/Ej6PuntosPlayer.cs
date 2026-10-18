@@ -4,45 +4,47 @@ using UnityEngine;
 
 public class Ej6PuntosPlayer : MonoBehaviour
 {
+    public bool destroyOnCollect = true;
     public TMP_Text pointsText;
 
-    private float points;
-    private float shieldTipo1Value;
-    private float shieldTipo2Value;
+    private float points = 0f;
+    private const float shieldTipo1Value = 5f;
+    private const float shieldTipo2Value = 10f;
 
     void Start() {
         if (!pointsText) {
             Debug.LogError(name + ": ¡No se ha seleccionado texto para mostrar la puntuación!");
         }
-        shieldTipo1Value = 5f;
-        shieldTipo2Value = 10f;
     }
 
     void Update() {
         pointsText.text = "Puntuación: " + points.ToString("F0", CultureInfo.InvariantCulture);
     }
 
-  void OnCollisionEnter(Collision collision) {
-        if (collision.gameObject.CompareTag("EscudoTipo1")) {
-            points += shieldTipo1Value;
-            Debug.Log(name + " (jugador) ha sumado +" + shieldTipo1Value + " puntos. Tiene en total " + points + " puntos.");
-            Destroy(collision.gameObject);
-        } else if (collision.gameObject.CompareTag("EscudoTipo2")) {
-            points += shieldTipo2Value;
-            Debug.Log(name + " (jugador) ha sumado +" + shieldTipo2Value + " puntos. Tiene en total " + points + " puntos.");
-            Destroy(collision.gameObject);
-        }
+    void OnCollisionEnter(Collision collision) {
+        CheckAndProcessShield(collision.gameObject);
     }
 
-    void OnTriggerEnter(Collider collider) {
-        if (collider.gameObject.CompareTag("EscudoTipo1")) {
-            points += shieldTipo1Value;
-            Debug.Log(name + " (jugador) ha sumado +" + shieldTipo1Value + " puntos. Tiene en total " + points + " puntos.");
-            Destroy(collider.gameObject);
-        } else if (collider.gameObject.CompareTag("EscudoTipo2")) {
-            points += shieldTipo2Value;
-            Debug.Log(name + " (jugador) ha sumado +" + shieldTipo2Value + " puntos. Tiene en total " + points + " puntos.");
-            Destroy(collider.gameObject);
+    void OnTriggerEnter(Collider other) {
+        CheckAndProcessShield(other.gameObject);
+    }
+
+    void CheckAndProcessShield(GameObject hitObject) {
+        float pointsToAdd = 0f;
+
+        if (hitObject.CompareTag("EscudoTipo1")) {
+            pointsToAdd = shieldTipo1Value;
+        } 
+        else if (hitObject.CompareTag("EscudoTipo2")) {
+            pointsToAdd = shieldTipo2Value;
+        }
+        // Si el objeto chocado era un escudo válido, sumamos y destruimos opcionalmente
+        if (pointsToAdd > 0f) {
+            points += pointsToAdd;
+            Debug.Log(name + " (jugador) ha sumado +" + pointsToAdd + " puntos. Tiene en total " + points + " puntos.");
+            if (destroyOnCollect) {
+                Destroy(hitObject);
+            }
         }
     }
 

@@ -2,32 +2,32 @@ using UnityEngine;
 
 public class Ej5PuntosPlayer : MonoBehaviour
 {
-    private float points;
-    private float shieldTipo1Value;
-    private float shieldTipo2Value;
-
-    void Start() {
-        shieldTipo1Value = 5f;
-        shieldTipo2Value = 10f;
-    }
+    private float points = 0f;
+    private const float shieldTipo1Value = 5f;
+    private const float shieldTipo2Value = 10f;
 
     void OnCollisionEnter(Collision collision) {
-        if (collision.gameObject.CompareTag("EscudoTipo1")) {
-            points += shieldTipo1Value;
-            Debug.Log(name + " (jugador) ha sumado +" + shieldTipo1Value + " puntos. Tiene en total " + points + " puntos.");
-        } else if (collision.gameObject.CompareTag("EscudoTipo2")) {
-            points += shieldTipo2Value;
-            Debug.Log(name + " (jugador) ha sumado +" + shieldTipo2Value + " puntos. Tiene en total " + points + " puntos.");
-        }
+        CheckAndProcessShield(collision.gameObject);
     }
 
-    void OnTriggerEnter(Collider collider) {
-        if (collider.gameObject.CompareTag("EscudoTipo1")) {
-            points += shieldTipo1Value;
-            Debug.Log(name + " (jugador) ha sumado +" + shieldTipo1Value + " puntos. Tiene en total " + points + " puntos.");
-        } else if (collider.gameObject.CompareTag("EscudoTipo2")) {
-            points += shieldTipo2Value;
-            Debug.Log(name + " (jugador) ha sumado +" + shieldTipo2Value + " puntos. Tiene en total " + points + " puntos.");
+    void OnTriggerEnter(Collider other) {
+        CheckAndProcessShield(other.gameObject);
+    }
+
+    void CheckAndProcessShield(GameObject hitObject) {
+        float pointsToAdd = 0f;
+
+        if (hitObject.CompareTag("EscudoTipo1")) {
+            pointsToAdd = shieldTipo1Value;
+        } 
+        else if (hitObject.CompareTag("EscudoTipo2")) {
+            pointsToAdd = shieldTipo2Value;
+        }
+        // Si el objeto chocado era un escudo válido, sumamos y destruimos
+        if (pointsToAdd > 0f) {
+            points += pointsToAdd;
+            Debug.Log(name + " (jugador) ha sumado +" + pointsToAdd + " puntos. Tiene en total " + points + " puntos.");
+            Destroy(hitObject);
         }
     }
 }
