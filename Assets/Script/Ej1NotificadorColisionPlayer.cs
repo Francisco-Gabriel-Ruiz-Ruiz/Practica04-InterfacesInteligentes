@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Ej1NotificadorColision : MonoBehaviour
+public class Ej1NotificadorColisionPlayer : MonoBehaviour
 {
     public GameObject collideTarget;
 
@@ -11,10 +11,6 @@ public class Ej1NotificadorColision : MonoBehaviour
         if (!collideTarget) {
           Debug.LogError(name + ": ¡No se ha seleccionado un objeto con el que colisionar!");
         }
-    }
-
-    void Update() {
-        
     }
 
     void OnTriggerEnter(Collider collider) {

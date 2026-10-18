@@ -5,7 +5,7 @@ public class Ej1RespuestaColisionParaLosTipo2 : MonoBehaviour
     public float speed = 1f;
     public GameObject target;
 
-    public Ej1NotificadorColision notificador;
+    public Ej1NotificadorColisionPlayer notificador;
 
     private bool receivedMessage;
     private Rigidbody myRigidbody;
@@ -13,7 +13,7 @@ public class Ej1RespuestaColisionParaLosTipo2 : MonoBehaviour
    
     void Start() {
         if (!notificador) {
-            Debug.LogError(name + ": ¡No se ha definido el notificador de tipo Ej1NotificadorColision!");
+            Debug.LogError(name + ": ¡No se ha definido el notificador de tipo Ej1NotificadorColisionPlayer!");
         } else {
             notificador.OnTriggerWithTarget += ActivateMovementTowardsTarget;
         }
