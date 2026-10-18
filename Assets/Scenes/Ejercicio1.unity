@@ -508,6 +508,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2134316181}
     - target: {fileID: 1367292931962947608, guid: ce8d0f460b1b8ff4b84e8fa767b29b26, type: 3}
+      propertyPath: objectTipo2Target
+      value: 
+      objectReference: {fileID: 908282803}
+    - target: {fileID: 1367292931962947608, guid: ce8d0f460b1b8ff4b84e8fa767b29b26, type: 3}
       propertyPath: sphereTipo2Target
       value: 
       objectReference: {fileID: 908282803}
@@ -553,7 +557,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7326169824138678243, guid: ce8d0f460b1b8ff4b84e8fa767b29b26, type: 3}
       propertyPath: m_Name
-      value: EsferaRoja3
+      value: EsferaRoja3_Tipo1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -577,6 +581,10 @@ PrefabInstance:
       propertyPath: notificador
       value: 
       objectReference: {fileID: 2134316181}
+    - target: {fileID: 1367292931962947608, guid: ce8d0f460b1b8ff4b84e8fa767b29b26, type: 3}
+      propertyPath: objectTipo2Target
+      value: 
+      objectReference: {fileID: 908282803}
     - target: {fileID: 1367292931962947608, guid: ce8d0f460b1b8ff4b84e8fa767b29b26, type: 3}
       propertyPath: sphereTipo2Target
       value: 
@@ -623,7 +631,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7326169824138678243, guid: ce8d0f460b1b8ff4b84e8fa767b29b26, type: 3}
       propertyPath: m_Name
-      value: EsferaRoja2
+      value: EsferaRoja2_Tipo1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -742,7 +750,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7671510377250642742, guid: dcc997b52d4b2fe43a72ce79ef1a7bd8, type: 3}
       propertyPath: m_Name
-      value: EsferaVerde2
+      value: EsferaVerde2_Tipo2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -932,6 +940,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2134316181}
     - target: {fileID: 1367292931962947608, guid: ce8d0f460b1b8ff4b84e8fa767b29b26, type: 3}
+      propertyPath: objectTipo2Target
+      value: 
+      objectReference: {fileID: 542712629}
+    - target: {fileID: 1367292931962947608, guid: ce8d0f460b1b8ff4b84e8fa767b29b26, type: 3}
       propertyPath: sphereTipo2Target
       value: 
       objectReference: {fileID: 542712629}
@@ -977,7 +989,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7326169824138678243, guid: ce8d0f460b1b8ff4b84e8fa767b29b26, type: 3}
       propertyPath: m_Name
-      value: EsferaRoja1
+      value: EsferaRoja1_Tipo1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1042,7 +1054,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7671510377250642742, guid: dcc997b52d4b2fe43a72ce79ef1a7bd8, type: 3}
       propertyPath: m_Name
-      value: EsferaVerde1
+      value: EsferaVerde1_Tipo2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1056,10 +1068,10 @@ SceneRoots:
   - {fileID: 330585546}
   - {fileID: 410087041}
   - {fileID: 832575519}
-  - {fileID: 4122668369480241774}
-  - {fileID: 5715528919376181891}
-  - {fileID: 1306453186}
   - {fileID: 246189114}
   - {fileID: 2134316180}
+  - {fileID: 4122668369480241774}
   - {fileID: 819953407}
   - {fileID: 454926680}
+  - {fileID: 5715528919376181891}
+  - {fileID: 1306453186}
