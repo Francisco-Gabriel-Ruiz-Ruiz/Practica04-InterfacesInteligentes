@@ -1,7 +1,7 @@
 using UnityEditor.VersionControl;
 using UnityEngine;
 
-public class Ej3NotificadorCaja : MonoBehaviour
+public class Ej3NotificadorCajaTiposHumanoides : MonoBehaviour
 {
     public delegate void message();
     public event message OnCollisionWithTipo1;

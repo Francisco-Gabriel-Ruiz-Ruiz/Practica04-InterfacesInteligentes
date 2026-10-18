@@ -8,7 +8,7 @@ public class Ej3RespuestaHumanoideTipo2 : MonoBehaviour
     public GameObject targetObject;
 
     public Ej1NotificadorColisionPlayer notificadorColisionPlayer;
-    public Ej3NotificadorCaja notificadorCaja;
+    public Ej3NotificadorCajaTiposHumanoides notificadorCaja;
 
     private bool receivedMessageColisionPlayer;
     private bool receivedMessageCaja;

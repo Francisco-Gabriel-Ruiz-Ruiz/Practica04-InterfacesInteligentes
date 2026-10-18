@@ -615,7 +615,7 @@ GameObject:
   - component: {fileID: 745475229}
   - component: {fileID: 745475228}
   m_Layer: 0
-  m_Name: Piedra (1)
+  m_Name: PiedraFlotante2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1257,7 +1257,7 @@ GameObject:
   - component: {fileID: 1621364270}
   - component: {fileID: 1621364269}
   m_Layer: 0
-  m_Name: Piedra
+  m_Name: PiedraFlotante1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2134,8 +2134,6 @@ SceneRoots:
   - {fileID: 620948948}
   - {fileID: 5669310787739171761}
   - {fileID: 1625175523}
-  - {fileID: 1621364272}
-  - {fileID: 745475231}
   - {fileID: 6898318632929139709}
   - {fileID: 1151772570}
   - {fileID: 548035797}
@@ -2145,3 +2143,5 @@ SceneRoots:
   - {fileID: 3111439209163191688}
   - {fileID: 2011723542}
   - {fileID: 544660986}
+  - {fileID: 1621364272}
+  - {fileID: 745475231}

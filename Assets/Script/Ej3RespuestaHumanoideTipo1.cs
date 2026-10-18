@@ -10,7 +10,7 @@ public class Ej3RespuestaHumanoideTipo1 : MonoBehaviour
     public GameObject shieldTargetTipo2;
 
     public Ej1NotificadorColisionPlayer notificadorColisionPlayer;
-    public Ej3NotificadorCaja notificadorCaja;
+    public Ej3NotificadorCajaTiposHumanoides notificadorCaja;
 
     private bool receivedMessageColisionPlayer;
     private bool receivedMessageCaja;
