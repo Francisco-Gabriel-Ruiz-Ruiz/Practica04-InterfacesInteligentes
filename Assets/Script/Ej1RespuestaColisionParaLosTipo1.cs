@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Ej1RespuestaColisionEsferaTipo1 : MonoBehaviour
+public class Ej1RespuestaColisionParaLosTipo1 : MonoBehaviour
 {
     public float speed = 1f;
     public GameObject sphereTipo2Target;

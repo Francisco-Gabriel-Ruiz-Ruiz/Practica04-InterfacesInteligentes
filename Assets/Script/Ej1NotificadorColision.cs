@@ -11,9 +11,6 @@ public class Ej1NotificadorColision : MonoBehaviour
         if (!collideTarget) {
           Debug.LogError(name + ": ¡No se ha seleccionado un objeto con el que colisionar!");
         }
-        if (!GetComponent<Collider>().isTrigger) {
-            Debug.LogError(name + ": ¡El objeto no tiene activado IsTrigger!");
-        }
     }
 
     void Update() {
