@@ -26,9 +26,11 @@ public class Ej6PuntosPlayer : MonoBehaviour
         if (collision.gameObject.CompareTag("EscudoTipo1")) {
             points += shieldTipo1Value;
             Debug.Log(name + " (jugador) ha sumado +" + shieldTipo1Value + " puntos. Tiene en total " + points + " puntos.");
+            Destroy(collision.gameObject);
         } else if (collision.gameObject.CompareTag("EscudoTipo2")) {
             points += shieldTipo2Value;
             Debug.Log(name + " (jugador) ha sumado +" + shieldTipo2Value + " puntos. Tiene en total " + points + " puntos.");
+            Destroy(collision.gameObject);
         }
     }
 
@@ -36,9 +38,11 @@ public class Ej6PuntosPlayer : MonoBehaviour
         if (collider.gameObject.CompareTag("EscudoTipo1")) {
             points += shieldTipo1Value;
             Debug.Log(name + " (jugador) ha sumado +" + shieldTipo1Value + " puntos. Tiene en total " + points + " puntos.");
+            Destroy(collider.gameObject);
         } else if (collider.gameObject.CompareTag("EscudoTipo2")) {
             points += shieldTipo2Value;
             Debug.Log(name + " (jugador) ha sumado +" + shieldTipo2Value + " puntos. Tiene en total " + points + " puntos.");
+            Destroy(collider.gameObject);
         }
     }
 
