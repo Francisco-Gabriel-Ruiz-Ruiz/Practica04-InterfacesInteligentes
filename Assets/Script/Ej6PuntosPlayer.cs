@@ -41,4 +41,8 @@ public class Ej6PuntosPlayer : MonoBehaviour
             Debug.Log(name + " (jugador) ha sumado +" + shieldTipo2Value + " puntos. Tiene en total " + points + " puntos.");
         }
     }
+
+    public float GetPlayerPoints() {
+        return points;
+    }
 }
