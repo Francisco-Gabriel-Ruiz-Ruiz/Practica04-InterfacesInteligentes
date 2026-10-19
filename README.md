@@ -15,10 +15,10 @@ La metodología seguida para su realización es la siguiente:
 ## Ejercicio 1: Comunicación por Mensajes y Persecución Condicionada
 
 - **Códigos desarrollados:**
-  * [Scripts/Ej1MovimientoPlayer.cs](Scripts/Ej1MovimientoPlayer.cs)
-  * [Scripts/Ej1NotificadorColisionPlayer.cs](Scripts/Ej1NotificadorColisionPlayer.cs)
-  * [Scripts/Ej1RespuestaColisionParaLosTipo1.cs](Scripts/Ej1RespuestaColisionParaLosTipo1.cs)
-  * [Scripts/Ej1RespuestaColisionParaLosTipo2.cs](Scripts/Ej1RespuestaColisionParaLosTipo2.cs)
+  * [Scripts/Ej1MovimientoPlayer.cs](Assets/Scripts/Ej1MovimientoPlayer.cs)
+  * [Scripts/Ej1NotificadorColisionPlayer.cs](Assets/Scripts/Ej1NotificadorColisionPlayer.cs)
+  * [Scripts/Ej1RespuestaColisionParaLosTipo1.cs](Assets/Scripts/Ej1RespuestaColisionParaLosTipo1.cs)
+  * [Scripts/Ej1RespuestaColisionParaLosTipo2.cs](Assets/Scripts/Ej1RespuestaColisionParaLosTipo2.cs)
 
 - **Demostración en GIF:**
 ![Demostración ejercicio 1](GitImages/Ejercicio01-P04-II.gif)
@@ -54,9 +54,9 @@ La metodología seguida para su realización es la siguiente:
 ## Ejercicio 3: Interacción con Escudos y Comportamientos Cruzados
 
 - **Códigos desarrollados:**
-  * [Scripts/Ej3NotificadorTiposHumanoides.cs](Scripts/Ej3NotificadorTiposHumanoides.cs)
-  * [Scripts/Ej3RespuestaHumanoideTipo1.cs](Scripts/Ej3RespuestaHumanoideTipo1.cs)
-  * [Scripts/Ej3RespuestaHumanoideTipo2.cs](Scripts/Ej3RespuestaHumanoideTipo2.cs)
+  * [Scripts/Ej3NotificadorTiposHumanoides.cs](Assets/Scripts/Ej3NotificadorTiposHumanoides.cs)
+  * [Scripts/Ej3RespuestaHumanoideTipo1.cs](Assets/Scripts/Ej3RespuestaHumanoideTipo1.cs)
+  * [Scripts/Ej3RespuestaHumanoideTipo2.cs](Assets/Scripts/Ej3RespuestaHumanoideTipo2.cs)
 
 - **Demostración en GIF (Ejemplo 1):**
 ![Demostración ejercicio 3 - Ejemplo 1](GitImages/Ejercicio03-Ejemplo1-P04-II.gif)
@@ -84,9 +84,9 @@ La metodología seguida para su realización es la siguiente:
 ## Ejercicio 4: Teletransporte y Orientación hacia Objetivos
 
 - **Códigos desarrollados:**
-  * [Scripts/Ej4NotificadorCajaAproximacion.cs](Scripts/Ej4NotificadorCajaAproximacion.cs)
-  * [Scripts/Ej4RespuestaAproximacionCajaHumanoideTipo1.cs](Scripts/Ej4RespuestaAproximacionCajaHumanoideTipo1.cs)
-  * [Scripts/Ej4RespuestaAproximacionCajaHumanoideTipo2.cs](Scripts/Ej4RespuestaAproximacionCajaHumanoideTipo2.cs)
+  * [Scripts/Ej4NotificadorCajaAproximacion.cs](Assets/Scripts/Ej4NotificadorCajaAproximacion.cs)
+  * [Scripts/Ej4RespuestaAproximacionCajaHumanoideTipo1.cs](Assets/Scripts/Ej4RespuestaAproximacionCajaHumanoideTipo1.cs)
+  * [Scripts/Ej4RespuestaAproximacionCajaHumanoideTipo2.cs](Assets/Scripts/Ej4RespuestaAproximacionCajaHumanoideTipo2.cs)
 
 - **Demostración en GIF:**
 ![Demostración ejercicio 4](GitImages/Ejercicio04-P04-II.gif)
@@ -108,7 +108,7 @@ La metodología seguida para su realización es la siguiente:
 ## Ejercicio 5: Recolectar Escudos y Actualización de Puntuación por Consola
 
 - **Código desarrollado:**
-  * [Scripts/Ej5PuntosPlayer.cs](Scripts/Ej5PuntosPlayer.cs)
+  * [Scripts/Ej5PuntosPlayer.cs](Assets/Scripts/Ej5PuntosPlayer.cs)
 
 - **Demostración en GIF:**
 ![Demostración ejercicio 5](GitImages/Ejercicio05-P04-II.gif)
@@ -123,7 +123,7 @@ La metodología seguida para su realización es la siguiente:
 ## Ejercicio 6: Interfaz de Usuario (UI) para la Puntuación
 
 - **Código desarrollado:**
-  * [Scripts/Ej6PuntosPlayer.cs](Scripts/Ej6PuntosPlayer.cs)
+  * [Scripts/Ej6PuntosPlayer.cs](Assets/Scripts/Ej6PuntosPlayer.cs)
 
 - **Demostración en GIF:**
 ![Demostración ejercicio 6](GitImages/Ejercicio06-P04-II.gif)
@@ -137,7 +137,7 @@ La metodología seguida para su realización es la siguiente:
 ## Ejercicio 7: Recompensas Visuales por Puntuación
 
 - **Código desarrollado:**
-  * [Scripts/Ej7PlayerReward.cs](Scripts/Ej7PlayerReward.cs)
+  * [Scripts/Ej7PlayerReward.cs](Assets/Scripts/Scripts/Ej7PlayerReward.cs)
 
 - **Demostración en GIF:**
 ![Demostración ejercicio 7](GitImages/Ejercicio07-P04-II.gif)
@@ -146,7 +146,7 @@ La metodología seguida para su realización es la siguiente:
 
 - Como sistema de recompensa, cada vez que el jugador alcanza o supera múltiplos de 100 puntos, recibe una corona visual en la interfaz.
 - Las coronas se van acumulando de manera vertical una encima de otra dentro de una zona designada (un panel UI situado en la zona inferior derecha de la pantalla).
-- Imagen utilizada como recurso para las coronas: [Enlace a asset de Supercell](https://fankit.supercell.com/d/BmehSDJrZNff/game-assets-1/show/eyJpZCI6NjA5NTYsInNjb3BlIjoiYXNzZXQ6dmlldyIsInRpbWVzdGFtcCI6IjE3OTIzNjY3MDkifQ:supercell:W0xBKuo_sUKM35eyq8GkLVJSiuqlvjB4C9iOriAvxuI).
+- Imagen utilizada como recurso para las coronas: [enlace a asset de Supercell](https://fankit.supercell.com/d/BmehSDJrZNff/game-assets-1/show/eyJpZCI6NjA5NTYsInNjb3BlIjoiYXNzZXQ6dmlldyIsInRpbWVzdGFtcCI6IjE3OTIzNjY3MDkifQ:supercell:W0xBKuo_sUKM35eyq8GkLVJSiuqlvjB4C9iOriAvxuI).
 
 
 
@@ -166,7 +166,7 @@ La metodología seguida para su realización es la siguiente:
 ## Ejercicio 9: El Jugador como Objeto Físico
 
 - **Código desarrollado:**
-  * [Scripts/Ej9MovimientoPlayerFisico.cs](Scripts/Ej9MovimientoPlayerFisico.cs)
+  * [Scripts/Ej9MovimientoPlayerFisico.cs](Assets/Scripts/Ej9MovimientoPlayerFisico.cs)
 
 - **Demostración en GIF:**
 ![Demostración ejercicio 9](GitImages/Ejercicio09-P04-II.gif)
