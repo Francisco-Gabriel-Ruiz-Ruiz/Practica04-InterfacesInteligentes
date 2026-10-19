@@ -167,6 +167,9 @@ La metodología seguida para su realización es la siguiente:
 - El castillo fue construido mediante los prefabs del siguiente Unity Asset: [enlace a Dungeon Modular Pack](https://assetstore.unity.com/packages/3d/environments/dungeons/dungeon-modular-pack-295430)
 
 
+También se ha implementado una escena con los elementos más tradicionales que se han utilizado durante la práctica. He aquí la demostración en GIF:
+![Demostración ejercicio 8 con implementación tradicional](GitImages/Ejercicio08-Tradicional-P04-II.gif)
+
 ## Ejercicio 9: El Jugador como Objeto Físico
 
 - **Código desarrollado:**
