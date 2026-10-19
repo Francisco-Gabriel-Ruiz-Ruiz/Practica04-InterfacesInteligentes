@@ -1,4 +1,3 @@
-using System.Numerics;
 using UnityEngine;
 
 public class Ej3RespuestaHumanoideTipo1 : MonoBehaviour

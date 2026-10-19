@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1198449978533668994}
   - component: {fileID: 2425539061575860402}
   - component: {fileID: 5219315643104939829}
+  - component: {fileID: 6340359533074221010}
   m_Layer: 0
   m_Name: EscudoTipo2
   m_TagString: EscudoTipo2
@@ -141,3 +142,15 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 9d34b073abce58249a1f664619a13aaa, type: 3}
+--- !u!114 &6340359533074221010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 316151122993705475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 405a3c4dfb72e2a47a5c87a61558a522, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Ej3EscudoCambioColor
