@@ -58,6 +58,7 @@ La metodología seguida para su realización es la siguiente:
   * [Assets/Scripts/Ej3NotificadorTiposHumanoides.cs](Assets/Scripts/Ej3NotificadorTiposHumanoides.cs)
   * [Assets/Scripts/Ej3RespuestaHumanoideTipo1.cs](Assets/Scripts/Ej3RespuestaHumanoideTipo1.cs)
   * [Assets/Scripts/Ej3RespuestaHumanoideTipo2.cs](Assets/Scripts/Ej3RespuestaHumanoideTipo2.cs)
+  * [Assets/Scripts/Ej3RespuestaHumanoideTipo2.cs](Assets/Scripts/Ej3EscudoCambioColor.cs)
 
 - **Demostración en GIF (Ejemplo 1):**
 ![Demostración ejercicio 3 - Ejemplo 1](GitImages/Ejercicio03-Ejemplo1-P04-II.gif)
@@ -71,6 +72,7 @@ La metodología seguida para su realización es la siguiente:
   * Si el jugador colisiona con un trigger -> Los humanoides Tipo 1 (rojos) persiguen a un Tipo 2 preseleccionado (azul), y los Tipo 2 persiguen al objeto preseleccionado (en este caso, ambos persiguen al jugador, que es el blanco).
   * Si un Humanoide Tipo 1 colisiona con el jugador -> Los humanoides Tipo 2 abandonan la persecución y la sustituyen por la búsqueda de escudos de Tipo 1.
   * Si un Humanoide Tipo 2 colisiona con el jugador -> Los humanoides Tipo 1 abandonan la persecución y la sustituyen por la búsqueda de escudos de Tipo 2.
+  * Si un Humanoide Tipo 1 o Tipo 2 colisiona con un escudo -> El escudo cambia a un color aleatorio.
 
 - **Restricción de movimiento:** Restringimos el movimiento en el eje Y para evitar que vuelen al perseguir los escudos, manteniéndolos firmes y caminando sobre el plano de césped.
 - Como el guion no especifica un escudo de tipo 1 preseleccionado de antemano, implementamos una selección aleatoria entre los presentes en la escena.
@@ -161,15 +163,17 @@ La metodología seguida para su realización es la siguiente:
 
 ### Consideraciones e Implementación
 
-- Se ha construido una escena prototipo que sigue una temática apropiada: un castillo para los soldados. Se disponen a los soldados de cada tipo 'enfrentados' y los soldados amarillos como guardias (siguen siendo IsTrigger). Cada soldado de Tipo1 y Tipo2 tienen configurados distintos objetivos de teletransporte, mira, persecución, etc. siguiendo las normas previamente establecidas para cada tipo.
+- Se ha construido una escena prototipo que sigue una temática apropiada: un castillo para los soldados. Se disponen a los soldados de cada tipo 'enfrentados' y los soldados amarillos como guardias (siguen siendo `IsTrigger`). Cada soldado de Tipo1 y Tipo2 tienen configurados distintos objetivos de teletransporte, mira, persecución, etc. siguiendo las normas previamente establecidas para cada tipo. Se le añadió un `Collider` a las escaleras y las columnas del suelo. También se añadió un plano a la escena como suelo con `Collider`.
 - Se combinan las mecánicas del Ejercicio 4 (aproximación a la caja, activaciones por triggers, persecuciones cruzadas, cambios de color de los escudos, teletransporte y orientación) con el sistema de puntuación y recompensas en UI del ejercicio 7.
-- Mientras los humanoides cambian dinámicamente de comportamiento (persiguiendo, teletransportándose o buscando escudos), el jugador colecciona puntos y acumula coronas en pantalla.
+- Vemos cómo todo lo implementado queda reflejado en el GIF y escena (y encaja temáticamente), pudiendo elegir qué hacer y cuándo ejecutar cada implementación (siguiendo las reglas establecidas).
 - **Nota importante:** Se desactivó la opción `destroyOnCollect` en los scripts de los escudos para evitar que se destruyan al ser recolectados, previniendo así la pérdida de referencias necesarias para el resto de humanoides. Aquí destaca la utilidad de esta propiedad configurable.
-- El castillo fue construido mediante los prefabs del siguiente Unity Asset: [enlace a Dungeon Modular Pack](https://assetstore.unity.com/packages/3d/environments/dungeons/dungeon-modular-pack-295430)
+- El castillo fue construido mediante los prefabs del siguiente Unity Asset: [enlace a Dungeon Modular Pack](https://assetstore.unity.com/packages/3d/environments/dungeons/dungeon-modular-pack-295430).
 
 
-También se ha implementado una escena con los elementos más tradicionales que se han utilizado durante la práctica. He aquí la demostración en GIF:
+También se ha implementado una escena con los elementos más tradicionales que se han utilizado durante la  (en [esta escena](Assets/Scenes/Ejercicio8_Tradicional.unity)). He aquí la demostración en GIF:
 ![Demostración ejercicio 8 con implementación tradicional](GitImages/Ejercicio08-Tradicional-P04-II.gif)
+
+- Mientras los humanoides cambian dinámicamente de comportamiento (persiguiendo, teletransportándose o buscando escudos), el jugador colecciona puntos y acumula coronas en pantalla.
 
 ## Ejercicio 9: El Jugador como Objeto Físico
 
