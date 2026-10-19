@@ -73,8 +73,9 @@ La metodología seguida para su realización es la siguiente:
 
 - **Restricción de movimiento:** Restringí el movimiento en el eje Y para evitar que volaran al perseguir los escudos, manteniéndolos firmes y caminando sobre el plano de césped.
 - Como el guion no especifica un escudo de tipo 1 preseleccionado de antemano, implementé una selección aleatoria entre los presentes en la escena.
+- El color de los escudos cambia a uno aleatorio cuando uno de los humanoides Tipo 1 o Tipo 2 los toca.
 - **Detalle de los GIFs:**
-  * En el primer GIF, primero toco al humanoide amarillo (trigger), luego a uno rojo (provocando que los azules vayan a escudos aleatorios), y posteriormente a uno azul (haciendo que los rojos se dirijan a sus escudos tipo 2 preseleccionados).
+  * En el primer GIF, primero toco al humanoide amarillo (trigger), luego a uno rojo (provocando que los azules vayan a escudos aleatorios), y posteriormente a uno azul (haciendo que los rojos se dirijan a sus escudos tipo 2 preseleccionados). Se ve que los escudos cambian de color (y además solamente por colisión con los humanoides Tipo1 o Tipo2. Me moví con el jugador a un escudo y no cambió de color). *Nota: intenté mostrar el escudo físico en primer plano que cambió de color pero se me escapó por el plano.*
   * En el segundo GIF, primero toco a uno azul, luego al amarillo (los rojos mantienen su comportamiento), y finalmente a uno rojo.
 
 - **Tipos de escudos:** Los escudos azules son de tipo 1 (colliders con `isTrigger`), mientras que los escudos rojos son de tipo 2 (objetos físicos con `Rigidbody` sin `isKinematic` y con `Collider`).
@@ -100,8 +101,8 @@ La metodología seguida para su realización es la siguiente:
   * Si un Humanoide Tipo 2 colisiona con el jugador -> Humanoides Tipo 1 abandonan la persecución y buscan escudos Tipo 2.
   * Si el jugador se aproxima a la caja a una distancia menor que $X$ -> Los humanoides Tipo 1 y Tipo 2 se teletransportan o comienzan a mirar un objeto preseleccionado, manteniendo el comportamiento que tuvieran previamente (inactivos o persiguiendo humanoides/escudos).
 
-- Al igual que en el ejercicio anterior, en el teletransporte se omite intencionalmente la modificación del eje Y para evitar desplazamientos verticales no deseados.
-- **En el GIF:** Primero me aproximo a la caja (configurada como target de aproximación a distancia 4). A continuación, toco a un humanoide azul (los rojos se dirigen a sus escudos) y luego al amarillo (los azules inician la persecución al jugador). Finalmente, al tocar a un rojo, los azules se dirigen hacia sus escudos. Se puede apreciar visualmente cómo un muñeco azul mira al jugador (el de la izquierda) y otro mira hacia la caja (el de la derecha).
+- Como en el ejercicio anterior, en el teletransporte se omite intencionalmente la modificación del eje Y para evitar desplazamientos verticales no deseados.
+- **En el GIF:** Primero me aproximo a la caja (configurada como target de aproximación a distancia 4). A continuación, toco a un humanoide azul (los rojos se dirigen a sus escudos) y luego al amarillo (los azules inician la persecución al jugador). Finalmente, al tocar a un rojo, los azules se dirigen hacia sus escudos. Se puede apreciar visualmente cómo un muñeco azul mira al jugador (el de la izquierda) y otro mira hacia la caja (el de la derecha). Se observan los cambios de colores de los escudos.
 
 *Nota: en el ejercicio 8 veremos una muestra de ejecución intercalada del efecto al aproximarse a la caja.*
 
@@ -177,7 +178,7 @@ La metodología seguida para su realización es la siguiente:
 
 - Se sustituyó el componente `Capsule Collider` original del jugador por un `Box Collider`.
 - Al convertir al jugador en un objeto estrictamente físico (`Collider` + `Rigidbody` estándar sin la opción `isKinematic`), este experimenta la gravedad (cae contra el suelo) y le cuesta más desplazar la caja situada en el fondo de la escena debido a las leyes de masa y fricción.
-- Se introdujo esta caja en una réplica del escenario del Ejercicio 3 para demostrar los cambios palpables en el *gameplay*, manteniendo intacto el comportamiento esperado de los humanoides.
+- Se introdujo esta caja en una réplica del escenario del Ejercicio 3 para demostrar los cambios palpables en el movimiento del jugador, manteniendo intacto el comportamiento esperado de los humanoides y la interacción con los escudos (el jugador no es capaz de cambiar el color de los escudos a pesar de cambiar a ser un GameObject físico).
 
 
 
