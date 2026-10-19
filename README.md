@@ -174,11 +174,10 @@ La metodología seguida para su realización es la siguiente:
 - **Nota importante:** Se desactivó la opción `destroyOnCollect` en los scripts de los escudos para evitar que se destruyan al ser recolectados, previniendo así la pérdida de referencias necesarias para el resto de humanoides. Aquí destaca la utilidad de esta propiedad configurable.
 - El castillo fue construido mediante los prefabs del siguiente Unity Asset: [enlace a Dungeon Modular Pack](https://assetstore.unity.com/packages/3d/environments/dungeons/dungeon-modular-pack-295430).
 
-
 También se ha implementado una escena con los elementos más tradicionales que se han utilizado durante la  (en [esta escena](Assets/Scenes/Ejercicio8_Tradicional.unity)). He aquí la demostración en GIF:
 ![Demostración ejercicio 8 con implementación tradicional](GitImages/Ejercicio08-Tradicional-P04-II.gif)
 
-- Mientras los humanoides cambian dinámicamente de comportamiento (persiguiendo, teletransportándose o buscando escudos), el jugador colecciona puntos y acumula coronas en pantalla.
+Vemos cómo mientras los humanoides cambian dinámicamente de comportamiento (persiguiendo, teletransportándose o buscando escudos), el jugador colecciona puntos y acumula coronas en pantalla.
 
 ## Ejercicio 9: El Jugador como Objeto Físico
 
