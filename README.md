@@ -15,10 +15,10 @@ La metodología seguida para su realización es la siguiente:
 ## Ejercicio 1: Comunicación por Mensajes y Persecución Condicionada
 
 - **Códigos desarrollados:**
-  * [Scripts/Ej1MovimientoPlayer.cs](Assets/Scripts/Ej1MovimientoPlayer.cs)
-  * [Scripts/Ej1NotificadorColisionPlayer.cs](Assets/Scripts/Ej1NotificadorColisionPlayer.cs)
-  * [Scripts/Ej1RespuestaColisionParaLosTipo1.cs](Assets/Scripts/Ej1RespuestaColisionParaLosTipo1.cs)
-  * [Scripts/Ej1RespuestaColisionParaLosTipo2.cs](Assets/Scripts/Ej1RespuestaColisionParaLosTipo2.cs)
+  * [Assets/Scripts/Ej1MovimientoPlayer.cs](Assets/Scripts/Ej1MovimientoPlayer.cs)
+  * [Assets/Scripts/Ej1NotificadorColisionPlayer.cs](Assets/Scripts/Ej1NotificadorColisionPlayer.cs)
+  * [Assets/Scripts/Ej1RespuestaColisionParaLosTipo1.cs](Assets/Scripts/Ej1RespuestaColisionParaLosTipo1.cs)
+  * [Assets/Scripts/Ej1RespuestaColisionParaLosTipo2.cs](Assets/Scripts/Ej1RespuestaColisionParaLosTipo2.cs)
 
 - **Demostración en GIF:**
 ![Demostración ejercicio 1](GitImages/Ejercicio01-P04-II.gif)
@@ -54,9 +54,9 @@ La metodología seguida para su realización es la siguiente:
 ## Ejercicio 3: Interacción con Escudos y Comportamientos Cruzados
 
 - **Códigos desarrollados:**
-  * [Scripts/Ej3NotificadorTiposHumanoides.cs](Assets/Scripts/Ej3NotificadorTiposHumanoides.cs)
-  * [Scripts/Ej3RespuestaHumanoideTipo1.cs](Assets/Scripts/Ej3RespuestaHumanoideTipo1.cs)
-  * [Scripts/Ej3RespuestaHumanoideTipo2.cs](Assets/Scripts/Ej3RespuestaHumanoideTipo2.cs)
+  * [Assets/Scripts/Ej3NotificadorTiposHumanoides.cs](Assets/Scripts/Ej3NotificadorTiposHumanoides.cs)
+  * [Assets/Scripts/Ej3RespuestaHumanoideTipo1.cs](Assets/Scripts/Ej3RespuestaHumanoideTipo1.cs)
+  * [Assets/Scripts/Ej3RespuestaHumanoideTipo2.cs](Assets/Scripts/Ej3RespuestaHumanoideTipo2.cs)
 
 - **Demostración en GIF (Ejemplo 1):**
 ![Demostración ejercicio 3 - Ejemplo 1](GitImages/Ejercicio03-Ejemplo1-P04-II.gif)
@@ -67,9 +67,9 @@ La metodología seguida para su realización es la siguiente:
 ### Consideraciones e Implementación
 
 - El comportamiento e interacción de la escena responde a las siguientes reglas:
-  * Si el jugador colisiona con un trigger -> Los humanoides Tipo 1 persiguen a los Tipo 2, y los Tipo 2 persiguen al objeto preseleccionado.
-  * Si un Humanoide Tipo 1 colisiona con una caja -> Los humanoides Tipo 2 abandonan la persecución y la sustituyen por la búsqueda de escudos de Tipo 1.
-  * Si un Humanoide Tipo 2 colisiona con una caja -> Los humanoides Tipo 1 abandonan la persecución y la sustituyen por la búsqueda de escudos de Tipo 2.
+  * Si el jugador colisiona con un trigger -> Los humanoides Tipo 1 (rojos) persiguen a un Tipo 2 preseleccionado (azul), y los Tipo 2 persiguen al objeto preseleccionado (en este caso, ambos persiguen al jugador, que es el blanco).
+  * Si un Humanoide Tipo 1 colisiona con el jugador -> Los humanoides Tipo 2 abandonan la persecución y la sustituyen por la búsqueda de escudos de Tipo 1.
+  * Si un Humanoide Tipo 2 colisiona con el jugador -> Los humanoides Tipo 1 abandonan la persecución y la sustituyen por la búsqueda de escudos de Tipo 2.
 
 - **Restricción de movimiento:** Restringí el movimiento en el eje Y para evitar que volaran al perseguir los escudos, manteniéndolos firmes y caminando sobre el plano de césped.
 - Como el guion no especifica un escudo de tipo 1 preseleccionado de antemano, implementé una selección aleatoria entre los presentes en la escena.
@@ -77,16 +77,16 @@ La metodología seguida para su realización es la siguiente:
   * En el primer GIF, primero toco al humanoide amarillo (trigger), luego a uno rojo (provocando que los azules vayan a escudos aleatorios), y posteriormente a uno azul (haciendo que los rojos se dirijan a sus escudos tipo 2 preseleccionados).
   * En el segundo GIF, primero toco a uno azul, luego al amarillo (los rojos mantienen su comportamiento), y finalmente a uno rojo.
 
-- **Tipos de escudos:** Los escudos azules son de tipo 1 (colliders con `isTrigger`), mientras que los escudos rojos son de tipo 2 (objetos físicos con `Rigidbody` configurado como `isKinematic` y `Collider`).
+- **Tipos de escudos:** Los escudos azules son de tipo 1 (colliders con `isTrigger`), mientras que los escudos rojos son de tipo 2 (objetos físicos con `Rigidbody` sin `isKinematic` y con `Collider`).
 
 
 
 ## Ejercicio 4: Teletransporte y Orientación hacia Objetivos
 
 - **Códigos desarrollados:**
-  * [Scripts/Ej4NotificadorCajaAproximacion.cs](Assets/Scripts/Ej4NotificadorCajaAproximacion.cs)
-  * [Scripts/Ej4RespuestaAproximacionCajaHumanoideTipo1.cs](Assets/Scripts/Ej4RespuestaAproximacionCajaHumanoideTipo1.cs)
-  * [Scripts/Ej4RespuestaAproximacionCajaHumanoideTipo2.cs](Assets/Scripts/Ej4RespuestaAproximacionCajaHumanoideTipo2.cs)
+  * [Assets/Scripts/Ej4NotificadorCajaAproximacion.cs](Assets/Scripts/Ej4NotificadorCajaAproximacion.cs)
+  * [Assets/Scripts/Ej4RespuestaAproximacionCajaHumanoideTipo1.cs](Assets/Scripts/Ej4RespuestaAproximacionCajaHumanoideTipo1.cs)
+  * [Assets/Scripts/Ej4RespuestaAproximacionCajaHumanoideTipo2.cs](Assets/Scripts/Ej4RespuestaAproximacionCajaHumanoideTipo2.cs)
 
 - **Demostración en GIF:**
 ![Demostración ejercicio 4](GitImages/Ejercicio04-P04-II.gif)
@@ -96,19 +96,21 @@ La metodología seguida para su realización es la siguiente:
 - Se permite una ejecución totalmente intercalada: el efecto de aproximación al objeto (teletransporte y mirada permanente) puede desencadenarse en cualquier momento.
 - **Comportamientos combinados:**
   * Si el jugador colisiona con un trigger -> Humanoides Tipo 1 persiguen a Tipo 2, y Tipo 2 persiguen un objeto preseleccionado.
-  * Si un Humanoide Tipo 1 colisiona con una caja -> Humanoides Tipo 2 abandonan la persecución y buscan escudos Tipo 1.
-  * Si un Humanoide Tipo 2 colisiona con una caja -> Humanoides Tipo 1 abandonan la persecución y buscan escudos Tipo 2.
+  * Si un Humanoide Tipo 1 colisiona con el jugador -> Humanoides Tipo 2 abandonan la persecución y buscan escudos Tipo 1.
+  * Si un Humanoide Tipo 2 colisiona con el jugador -> Humanoides Tipo 1 abandonan la persecución y buscan escudos Tipo 2.
   * Si el jugador se aproxima a la caja a una distancia menor que $X$ -> Los humanoides Tipo 1 y Tipo 2 se teletransportan o comienzan a mirar un objeto preseleccionado, manteniendo el comportamiento que tuvieran previamente (inactivos o persiguiendo humanoides/escudos).
 
 - Al igual que en el ejercicio anterior, en el teletransporte se omite intencionalmente la modificación del eje Y para evitar desplazamientos verticales no deseados.
-- **En el GIF:** Primero me aproximo a la caja (configurada como target de aproximación a distancia 4). A continuación, toco a un humanoide azul y luego al amarillo (los azules inician la persecución). Finalmente, al tocar a un rojo, los azules se dirigen hacia sus escudos. Se puede apreciar visualmente cómo un muñeco azul mira al jugador (el de la izquierda) y otro mira hacia la caja (el de la derecha).
+- **En el GIF:** Primero me aproximo a la caja (configurada como target de aproximación a distancia 4). A continuación, toco a un humanoide azul (los rojos se dirigen a sus escudos) y luego al amarillo (los azules inician la persecución al jugador). Finalmente, al tocar a un rojo, los azules se dirigen hacia sus escudos. Se puede apreciar visualmente cómo un muñeco azul mira al jugador (el de la izquierda) y otro mira hacia la caja (el de la derecha).
+
+*Nota: en el ejercicio 8 veremos una muestra de ejecución intercalada del efecto al aproximarse a la caja.*
 
 
 
 ## Ejercicio 5: Recolectar Escudos y Actualización de Puntuación por Consola
 
 - **Código desarrollado:**
-  * [Scripts/Ej5PuntosPlayer.cs](Assets/Scripts/Ej5PuntosPlayer.cs)
+  * [Assets/Scripts/Ej5PuntosPlayer.cs](Assets/Scripts/Ej5PuntosPlayer.cs)
 
 - **Demostración en GIF:**
 ![Demostración ejercicio 5](GitImages/Ejercicio05-P04-II.gif)
@@ -123,7 +125,7 @@ La metodología seguida para su realización es la siguiente:
 ## Ejercicio 6: Interfaz de Usuario (UI) para la Puntuación
 
 - **Código desarrollado:**
-  * [Scripts/Ej6PuntosPlayer.cs](Assets/Scripts/Ej6PuntosPlayer.cs)
+  * [Assets/Scripts/Ej6PuntosPlayer.cs](Assets/Scripts/Ej6PuntosPlayer.cs)
 
 - **Demostración en GIF:**
 ![Demostración ejercicio 6](GitImages/Ejercicio06-P04-II.gif)
@@ -137,7 +139,7 @@ La metodología seguida para su realización es la siguiente:
 ## Ejercicio 7: Recompensas Visuales por Puntuación
 
 - **Código desarrollado:**
-  * [Scripts/Ej7PlayerReward.cs](Assets/Scripts/Scripts/Ej7PlayerReward.cs)
+  * [Assets/Scripts/Ej7PlayerReward.cs](Assets/Scripts/Scripts/Ej7PlayerReward.cs)
 
 - **Demostración en GIF:**
 ![Demostración ejercicio 7](GitImages/Ejercicio07-P04-II.gif)
@@ -166,7 +168,7 @@ La metodología seguida para su realización es la siguiente:
 ## Ejercicio 9: El Jugador como Objeto Físico
 
 - **Código desarrollado:**
-  * [Scripts/Ej9MovimientoPlayerFisico.cs](Assets/Scripts/Ej9MovimientoPlayerFisico.cs)
+  * [Assets/Scripts/Ej9MovimientoPlayerFisico.cs](Assets/Scripts/Ej9MovimientoPlayerFisico.cs)
 
 - **Demostración en GIF:**
 ![Demostración ejercicio 9](GitImages/Ejercicio09-P04-II.gif)
@@ -181,6 +183,6 @@ La metodología seguida para su realización es la siguiente:
 
 ## Nota Adicional y Recursos Gráficos
 
-- El personaje del jugador es un modelo de humanoide blanco equipado con un colisionador de tipo cápsula.
+- El personaje del jugador es un modelo de humanoide blanco equipado con un colisionador de tipo cápsula (exceptuando el ejercicio 9).
 - Se generaron *prefabs* para los humanoides normales asegurando un comportamiento idéntico y modular en todas las escenas.
-- Textura de caja utilizada en las pruebas: [Enlace a RenderHub Syt Studio](https://www.renderhub.com/syt-studio/box-texture-pbr).
+- Textura de caja utilizada en las pruebas: [enlace a RenderHub Syt Studio](https://www.renderhub.com/syt-studio/box-texture-pbr).
