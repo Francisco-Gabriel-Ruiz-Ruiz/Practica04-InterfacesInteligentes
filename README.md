@@ -25,10 +25,11 @@ La metodología seguida para su realización es la siguiente:
 
 ### Consideraciones e Implementación
 
-- En este ejercicio inicial, configuré la escena utilizando esferas rojas (etiquetadas como `Tipo1`) y esferas verdes (etiquetadas como `Tipo2`), junto con un cubo (jugador) y un cilindro.
-- **Consideración de diseño:** Hice que el cilindro fuera el objeto que se moviera en vez del cubo, obligando a las esferas verdes a perseguirlo para demostrar el funcionamiento de la mecánica.
+- En este ejercicio inicial, configuramos la escena utilizando esferas rojas (etiquetadas como `Tipo1`) y esferas verdes (etiquetadas como `Tipo2`), junto con un cubo (jugador) y un cilindro.
+- **Consideración de diseño:** Hicimos que el cilindro fuera el objeto que se moviera en vez del cubo, obligando a las esferas verdes a perseguirlo para demostrar el funcionamiento de la mecánica.
 - **Mecánica de eventos:** Cuando el cubo colisiona con el cilindro (gestionado mediante `OnTriggerEnter`), el notificador emite un mensaje a través de eventos y delegados en C# al que están suscritas las esferas.
 - Las esferas de tipo 1 se dirigen hacia una esfera de tipo 2 preseleccionada, mientras que las esferas de tipo 2 se desplazan hacia el cilindro. Todo el movimiento físico se restringe y actualiza de forma controlada mediante `Rigidbody.MovePosition()` en el método `FixedUpdate()`.
+- En la demostración, modificamos algunas velocidades para demostrar que cada objeto tiene su propia velocidad.
 
 
 
@@ -40,11 +41,11 @@ La metodología seguida para su realización es la siguiente:
 ### Consideraciones e Implementación
 
 - Se sustituyeron los objetos geométricos primitivos por modelos de humanoides.
-- **Escenario y Texturas:** Usé un plano al que le incorporé una textura de césped ([enlace a la imagen de césped](https://es.pinterest.com/pin/668925350936457709/)) para mejorar el aspecto visual donde se desplazan los humanoides.
-- **Adaptación de Assets:** Como los assets estaban desactualizados, cambié el shader de los materiales a *Universal Render Pipeline/Lit* y creé varios *Base Maps* de colores distintos asignados a cada material.
+- **Escenario y Texturas:** Usamos un plano al que le incorporamos una textura de césped ([enlace a la imagen de césped](https://es.pinterest.com/pin/668925350936457709/)) para mejorar el aspecto visual donde se desplazan los humanoides.
+- **Adaptación de Assets:** Como los assets estaban desactualizados, cambiamos el shader de los materiales a *Universal Render Pipeline/Lit* y creamos varios *Base Maps* de colores distintos asignados a cada material.
 - **Roles en la escena:**
   * El jugador es el humanoide de color blanco.
-  * El humanoide amarillo actúa como el *trigger* que provoca que el jugador mande el mensaje a los humanoides azules y rojos.
+  * El humanoide amarillo actúa como el *trigger* que provoca que el jugador mande el mensaje a los humanoides azules y rojos. Es `isTrigger`.
   * Los humanoides rojos son de tipo 1 (persiguen a un tipo 2 preseleccionado).
   * Los humanoides azules son de tipo 2 (persiguen al objeto preseleccionado, en este caso el jugador blanco).
 - Todos los humanoides rojos y azules tienen activada la propiedad `isTrigger`.
@@ -71,12 +72,12 @@ La metodología seguida para su realización es la siguiente:
   * Si un Humanoide Tipo 1 colisiona con el jugador -> Los humanoides Tipo 2 abandonan la persecución y la sustituyen por la búsqueda de escudos de Tipo 1.
   * Si un Humanoide Tipo 2 colisiona con el jugador -> Los humanoides Tipo 1 abandonan la persecución y la sustituyen por la búsqueda de escudos de Tipo 2.
 
-- **Restricción de movimiento:** Restringí el movimiento en el eje Y para evitar que volaran al perseguir los escudos, manteniéndolos firmes y caminando sobre el plano de césped.
-- Como el guion no especifica un escudo de tipo 1 preseleccionado de antemano, implementé una selección aleatoria entre los presentes en la escena.
+- **Restricción de movimiento:** Restringimos el movimiento en el eje Y para evitar que vuelen al perseguir los escudos, manteniéndolos firmes y caminando sobre el plano de césped.
+- Como el guion no especifica un escudo de tipo 1 preseleccionado de antemano, implementamos una selección aleatoria entre los presentes en la escena.
 - El color de los escudos cambia a uno aleatorio cuando uno de los humanoides Tipo 1 o Tipo 2 los toca.
 - **Detalle de los GIFs:**
-  * En el primer GIF, primero toco al humanoide amarillo (trigger), luego a uno rojo (provocando que los azules vayan a escudos aleatorios), y posteriormente a uno azul (haciendo que los rojos se dirijan a sus escudos tipo 2 preseleccionados). Se ve que los escudos cambian de color (y además solamente por colisión con los humanoides Tipo1 o Tipo2. Me moví con el jugador a un escudo y no cambió de color). *Nota: intenté mostrar el escudo físico en primer plano que cambió de color pero se me escapó por el plano.*
-  * En el segundo GIF, primero toco a uno azul, luego al amarillo (los rojos mantienen su comportamiento), y finalmente a uno rojo.
+  * En el primer GIF, primero tocamos al humanoide amarillo (trigger), luego a uno rojo (provocando que los azules vayan a escudos aleatorios), y posteriormente a uno azul (haciendo que los rojos se dirijan a sus escudos tipo 2 preseleccionados). Se ve que los escudos cambian de color (y además solamente por colisión con los humanoides Tipo1 o Tipo2. Nos movimos con el jugador a un escudo y no cambió de color). *Nota: se intentó mostrar el escudo físico en primer plano que cambió de color pero se escapó por el plano.*
+  * En el segundo GIF, primero tocamos a uno azul, luego al amarillo (los rojos mantienen su comportamiento), y finalmente a uno rojo.
 
 - **Tipos de escudos:** Los escudos azules son de tipo 1 (colliders con `isTrigger`), mientras que los escudos rojos son de tipo 2 (objetos físicos con `Rigidbody` sin `isKinematic` y con `Collider`).
 
@@ -102,7 +103,7 @@ La metodología seguida para su realización es la siguiente:
   * Si el jugador se aproxima a la caja a una distancia menor que $X$ -> Los humanoides Tipo 1 y Tipo 2 se teletransportan o comienzan a mirar un objeto preseleccionado, manteniendo el comportamiento que tuvieran previamente (inactivos o persiguiendo humanoides/escudos).
 
 - Como en el ejercicio anterior, en el teletransporte se omite intencionalmente la modificación del eje Y para evitar desplazamientos verticales no deseados.
-- **En el GIF:** Primero me aproximo a la caja (configurada como target de aproximación a distancia 4). A continuación, toco a un humanoide azul (los rojos se dirigen a sus escudos) y luego al amarillo (los azules inician la persecución al jugador). Finalmente, al tocar a un rojo, los azules se dirigen hacia sus escudos. Se puede apreciar visualmente cómo un muñeco azul mira al jugador (el de la izquierda) y otro mira hacia la caja (el de la derecha). Se observan los cambios de colores de los escudos.
+- **En el GIF:** Primero nos aproximamos a la caja (configurada como target de aproximación a distancia 4). A continuación, tocamos a un humanoide azul (los rojos se dirigen a sus escudos) y luego al amarillo (los azules inician la persecución al jugador). Finalmente, al tocar a un rojo, los azules se dirigen hacia sus escudos. Se puede apreciar visualmente cómo un muñeco azul mira al jugador (el de la izquierda) y otro mira hacia la caja (el de la derecha). Se observan los cambios de colores de los escudos.
 
 *Nota: en el ejercicio 8 veremos una muestra de ejecución intercalada del efecto al aproximarse a la caja.*
 
