@@ -4,15 +4,15 @@ public class Ej4RespuestaAproximacionCajaHumanoideTipo1 : MonoBehaviour
 {
     public GameObject shieldTarget;
 
-    public Ej4NotificadorCajaAproximacion notificadorCajaAproximacion;
+    public Ej4NotificadorAproximacion notificadorAproximacion;
 
     private bool eventFired;
 
     void Start() {
-        if (!notificadorCajaAproximacion) {
+        if (!notificadorAproximacion) {
             Debug.LogError(name + ": ¡No hay notificador asignado!");
         } else {
-            notificadorCajaAproximacion.OnTargetApproximation += TeleportShieldTarget;
+            notificadorAproximacion.OnTargetApproximation += TeleportShieldTarget;
         }
         if (!shieldTarget.transform) {
             Debug.LogError(name + ": ¡El escudo asignado no tiene Transform!");
@@ -28,7 +28,7 @@ public class Ej4RespuestaAproximacionCajaHumanoideTipo1 : MonoBehaviour
         Vector3 newPosition = shieldTarget.transform.position;
         newPosition.y = previousHeight; 
         transform.position = newPosition;
-        Debug.Log(name + ": Notificación recibida de " + notificadorCajaAproximacion.name + ", me estoy teletransportando a mi escudo objetivo " + shieldTarget.name);
+        Debug.Log(name + ": Notificación recibida de " + notificadorAproximacion.name + ", me estoy teletransportando a mi escudo objetivo " + shieldTarget.name);
         eventFired = true;
     }
 }

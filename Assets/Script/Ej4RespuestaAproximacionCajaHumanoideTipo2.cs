@@ -3,16 +3,16 @@ using UnityEngine;
 public class Ej4RespuestaAproximacionCajaHumanoideTipo2 : MonoBehaviour
 {
     public GameObject lookTarget;
-    public Ej4NotificadorCajaAproximacion notificadorCajaAproximacion;
+    public Ej4NotificadorAproximacion notificadorAproximacion;
 
     private bool eventFired;
     private Rigidbody myRigidbody;
 
     void Start() {
-        if (!notificadorCajaAproximacion) {
+        if (!notificadorAproximacion) {
             Debug.LogError(name + ": ¡No hay notificador asignado!");
         } else {
-            notificadorCajaAproximacion.OnTargetApproximation += LookForeverAtTarget;
+            notificadorAproximacion.OnTargetApproximation += LookForeverAtTarget;
         }
         if (!lookTarget || !lookTarget.transform) {
             Debug.LogError(name + ": ¡No hay objeto con Transform al que mirar por siempre asignado!");
@@ -42,7 +42,7 @@ public class Ej4RespuestaAproximacionCajaHumanoideTipo2 : MonoBehaviour
         if (eventFired) {
             return;
         }
-        Debug.Log(name + ": Notificación recibida de " + notificadorCajaAproximacion.name + ", ahora miraré por siempre al objeto " + lookTarget.name);
+        Debug.Log(name + ": Notificación recibida de " + notificadorAproximacion.name + ", ahora miraré por siempre al objeto " + lookTarget.name);
         eventFired = true;
     }
 }

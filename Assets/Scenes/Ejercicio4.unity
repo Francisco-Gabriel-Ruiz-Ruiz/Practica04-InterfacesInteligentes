@@ -168,7 +168,7 @@ MonoBehaviour:
   shieldPersecutionSpeed: 1
   targetObject: {fileID: 4033469148352625385}
   notificadorColisionPlayer: {fileID: 7218710618913652321}
-  notificadorCaja: {fileID: 7218710618913652323}
+  notificadorHumanoide: {fileID: 7218710618913652323}
 --- !u!114 &7439485
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -182,7 +182,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Ej4RespuestaAproximacionCajaHumanoideTipo2
   lookTarget: {fileID: 1271566503}
-  notificadorCajaAproximacion: {fileID: 7218710618913652322}
+  notificadorAproximacion: {fileID: 7218710618913652322}
 --- !u!1001 &46222642
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -490,6 +490,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1283906273}
     - target: {fileID: 4227409833005550698, guid: 4e3fc0e01ffe45b4ca07b08da2ad8d7e, type: 3}
+      propertyPath: notificadorHumanoide
+      value: 
+      objectReference: {fileID: 7218710618913652323}
+    - target: {fileID: 4227409833005550698, guid: 4e3fc0e01ffe45b4ca07b08da2ad8d7e, type: 3}
       propertyPath: notificadorColisionPlayer
       value: 
       objectReference: {fileID: 7218710618913652321}
@@ -501,6 +505,10 @@ PrefabInstance:
       propertyPath: shieldTarget
       value: 
       objectReference: {fileID: 573856935}
+    - target: {fileID: 7870041013147973636, guid: 4e3fc0e01ffe45b4ca07b08da2ad8d7e, type: 3}
+      propertyPath: notificadorAproximacion
+      value: 
+      objectReference: {fileID: 7218710618913652322}
     - target: {fileID: 7870041013147973636, guid: 4e3fc0e01ffe45b4ca07b08da2ad8d7e, type: 3}
       propertyPath: notificadorCajaAproximacion
       value: 
@@ -1755,6 +1763,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 7218710618913652323}
     - target: {fileID: 3734627813454183325, guid: 4b6de45456a69a341ba6fa158cc2c3d5, type: 3}
+      propertyPath: notificadorHumanoide
+      value: 
+      objectReference: {fileID: 7218710618913652323}
+    - target: {fileID: 3734627813454183325, guid: 4b6de45456a69a341ba6fa158cc2c3d5, type: 3}
       propertyPath: notificadorColisionPlayer
       value: 
       objectReference: {fileID: 7218710618913652321}
@@ -1762,6 +1774,10 @@ PrefabInstance:
       propertyPath: lookTarget
       value: 
       objectReference: {fileID: 4033469148352625385}
+    - target: {fileID: 5074813486725481782, guid: 4b6de45456a69a341ba6fa158cc2c3d5, type: 3}
+      propertyPath: notificadorAproximacion
+      value: 
+      objectReference: {fileID: 7218710618913652322}
     - target: {fileID: 5074813486725481782, guid: 4b6de45456a69a341ba6fa158cc2c3d5, type: 3}
       propertyPath: notificadorCajaAproximacion
       value: 
@@ -1792,6 +1808,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 778461389}
     - target: {fileID: 4227409833005550698, guid: 4e3fc0e01ffe45b4ca07b08da2ad8d7e, type: 3}
+      propertyPath: notificadorHumanoide
+      value: 
+      objectReference: {fileID: 7218710618913652323}
+    - target: {fileID: 4227409833005550698, guid: 4e3fc0e01ffe45b4ca07b08da2ad8d7e, type: 3}
       propertyPath: notificadorColisionPlayer
       value: 
       objectReference: {fileID: 7218710618913652321}
@@ -1803,6 +1823,10 @@ PrefabInstance:
       propertyPath: shieldTarget
       value: 
       objectReference: {fileID: 1155749814}
+    - target: {fileID: 7870041013147973636, guid: 4e3fc0e01ffe45b4ca07b08da2ad8d7e, type: 3}
+      propertyPath: notificadorAproximacion
+      value: 
+      objectReference: {fileID: 7218710618913652322}
     - target: {fileID: 7870041013147973636, guid: 4e3fc0e01ffe45b4ca07b08da2ad8d7e, type: 3}
       propertyPath: notificadorCajaAproximacion
       value: 
@@ -1887,6 +1911,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 48915499}
     - target: {fileID: 4227409833005550698, guid: 4e3fc0e01ffe45b4ca07b08da2ad8d7e, type: 3}
+      propertyPath: notificadorHumanoide
+      value: 
+      objectReference: {fileID: 7218710618913652323}
+    - target: {fileID: 4227409833005550698, guid: 4e3fc0e01ffe45b4ca07b08da2ad8d7e, type: 3}
       propertyPath: notificadorColisionPlayer
       value: 
       objectReference: {fileID: 7218710618913652321}
@@ -1898,6 +1926,10 @@ PrefabInstance:
       propertyPath: shieldTarget
       value: 
       objectReference: {fileID: 997518528}
+    - target: {fileID: 7870041013147973636, guid: 4e3fc0e01ffe45b4ca07b08da2ad8d7e, type: 3}
+      propertyPath: notificadorAproximacion
+      value: 
+      objectReference: {fileID: 7218710618913652322}
     - target: {fileID: 7870041013147973636, guid: 4e3fc0e01ffe45b4ca07b08da2ad8d7e, type: 3}
       propertyPath: notificadorCajaAproximacion
       value: 

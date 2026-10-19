@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Ej4NotificadorCajaAproximacion : MonoBehaviour
+public class Ej4NotificadorAproximacion : MonoBehaviour
 {
     public GameObject approximationTarget;
     public float distanceLimit = 4f;

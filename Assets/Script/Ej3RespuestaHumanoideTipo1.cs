@@ -10,7 +10,7 @@ public class Ej3RespuestaHumanoideTipo1 : MonoBehaviour
     public GameObject shieldTargetTipo2;
 
     public Ej1NotificadorColisionPlayer notificadorColisionPlayer;
-    public Ej3NotificadorCajaTiposHumanoides notificadorCaja;
+    public Ej3NotificadorTiposHumanoides notificadorHumanoide;
 
     private bool receivedMessageColisionPlayer;
     private bool receivedMessageCaja;
@@ -18,11 +18,11 @@ public class Ej3RespuestaHumanoideTipo1 : MonoBehaviour
     private UnityEngine.Vector3 movementDirection;
 
     void Start() {
-        if (!notificadorColisionPlayer || !notificadorCaja) {
+        if (!notificadorColisionPlayer || !notificadorHumanoide) {
             Debug.LogError(name + ": ¡No se han definido todos los notificadores!");
         } else {
             notificadorColisionPlayer.OnTriggerWithTarget += ActivatePersecutionToTipo2;
-            notificadorCaja.OnCollisionWithTipo2 += ActivateShieldPersecution; // Cuando la caja colisiona con 'Tipo2', los 'Tipo1' (este) huyen a escudos 'Tipo2'
+            notificadorHumanoide.OnCollisionWithTipo2 += ActivateShieldPersecution; // Cuando el jugador colisiona con 'Tipo2', los 'Tipo1' (este) huyen a escudos 'Tipo2'
         }
         if (!objectTipo2Target || !objectTipo2Target.CompareTag("Tipo2")) {
             Debug.LogError(name + ": ¡No se ha asignado un GameObject objetivo con la etiqueta 'Tipo2'!");

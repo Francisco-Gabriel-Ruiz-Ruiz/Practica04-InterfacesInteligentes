@@ -168,7 +168,7 @@ MonoBehaviour:
   shieldPersecutionSpeed: 1
   targetObject: {fileID: 4033469148352625385}
   notificadorColisionPlayer: {fileID: 7218710618913652321}
-  notificadorCaja: {fileID: 7218710618913652332}
+  notificadorHumanoide: {fileID: 7218710618913652332}
 --- !u!1001 &46222642
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -920,7 +920,7 @@ MonoBehaviour:
   objectTipo2Target: {fileID: 7439479}
   shieldTargetTipo2: {fileID: 778461389}
   notificadorColisionPlayer: {fileID: 7218710618913652321}
-  notificadorCaja: {fileID: 7218710618913652332}
+  notificadorHumanoide: {fileID: 7218710618913652332}
 --- !u!1 &1439064271 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2176751701380227503, guid: 4d375d76a4e27cb41b5d8ae4d2d14961, type: 3}
@@ -971,7 +971,7 @@ MonoBehaviour:
   objectTipo2Target: {fileID: 7439479}
   shieldTargetTipo2: {fileID: 1283906273}
   notificadorColisionPlayer: {fileID: 7218710618913652321}
-  notificadorCaja: {fileID: 7218710618913652332}
+  notificadorHumanoide: {fileID: 7218710618913652332}
 --- !u!1 &1440148884
 GameObject:
   m_ObjectHideFlags: 0
@@ -1918,6 +1918,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 48915499}
     - target: {fileID: 6478545827253572827, guid: 7a0f92ef1c6520443a2eab414b670c83, type: 3}
+      propertyPath: notificadorHumanoide
+      value: 
+      objectReference: {fileID: 7218710618913652332}
+    - target: {fileID: 6478545827253572827, guid: 7a0f92ef1c6520443a2eab414b670c83, type: 3}
       propertyPath: notificadorColisionPlayer
       value: 
       objectReference: {fileID: 7218710618913652321}
@@ -1940,6 +1944,10 @@ PrefabInstance:
       objectReference: {fileID: 4033469148352625385}
     - target: {fileID: 3928195434405670991, guid: c8e7fe93c5614684fb2683fc3381045c, type: 3}
       propertyPath: notificadorCaja
+      value: 
+      objectReference: {fileID: 7218710618913652332}
+    - target: {fileID: 3928195434405670991, guid: c8e7fe93c5614684fb2683fc3381045c, type: 3}
+      propertyPath: notificadorHumanoide
       value: 
       objectReference: {fileID: 7218710618913652332}
     - target: {fileID: 3928195434405670991, guid: c8e7fe93c5614684fb2683fc3381045c, type: 3}

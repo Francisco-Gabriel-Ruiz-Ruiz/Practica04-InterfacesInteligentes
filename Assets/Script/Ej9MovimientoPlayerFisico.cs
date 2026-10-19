@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Ej9MovimientoPlayerFisico : MonoBehaviour
 {
-    public float speed = 5f; // Nota: con físicas reales, la velocidad suele requerir valores un poco mayores que con MovePosition
+    public float speed = 5f;
 
     private Rigidbody myRigidbody;
     private float horizontalMovement;
@@ -22,7 +22,6 @@ public class Ej9MovimientoPlayerFisico : MonoBehaviour
     }
 
     void Update() {
-        // Obtenemos los inputs de movimiento en el Update (para que la respuesta al teclado sea fluida)
         horizontalMovement = Input.GetAxis("Horizontal");
         verticalMovement = Input.GetAxis("Vertical");
     }
