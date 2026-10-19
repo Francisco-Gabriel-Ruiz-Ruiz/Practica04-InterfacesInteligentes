@@ -163,7 +163,12 @@ La metodología seguida para su realización es la siguiente:
 
 ### Consideraciones e Implementación
 
-- Se ha construido una escena prototipo que sigue una temática apropiada: un castillo para los soldados. Se disponen a los soldados de cada tipo 'enfrentados' y los soldados amarillos como guardias (siguen siendo `IsTrigger`). Cada soldado de Tipo1 y Tipo2 tienen configurados distintos objetivos de teletransporte, mira, persecución, etc. siguiendo las normas previamente establecidas para cada tipo. Se le añadió un `Collider` a las escaleras y las columnas del suelo. También se añadió un plano a la escena como suelo con `Collider`.
+- Se ha construido una escena prototipo que sigue una temática apropiada: un castillo para los soldados.
+  - Se disponen a los soldados de cada tipo 'enfrentados' y los soldados amarillos como guardias (siguen siendo `IsTrigger`).
+  - Cada soldado de Tipo1 y Tipo2 tienen configurados distintos objetivos de teletransporte, mira, persecución, etc. siguiendo las normas previamente establecidas para cada tipo.
+  - Se le añadió un `Collider` a las escaleras y las columnas del suelo.
+  - Se añadió un plano a la escena como suelo con `Collider`.
+  - Se eliminó el Direction Light (ya que es una sala), por lo que usamos las antorchas con Point Lights para iluminar. Detrás de la cámara no hay ningún elemento para no sobrecargar la escena innecesariamente.
 - Se combinan las mecánicas del Ejercicio 4 (aproximación a la caja, activaciones por triggers, persecuciones cruzadas, cambios de color de los escudos, teletransporte y orientación) con el sistema de puntuación y recompensas en UI del ejercicio 7.
 - Vemos cómo todo lo implementado queda reflejado en el GIF y escena (y encaja temáticamente), pudiendo elegir qué hacer y cuándo ejecutar cada implementación (siguiendo las reglas establecidas).
 - **Nota importante:** Se desactivó la opción `destroyOnCollect` en los scripts de los escudos para evitar que se destruyan al ser recolectados, previniendo así la pérdida de referencias necesarias para el resto de humanoides. Aquí destaca la utilidad de esta propiedad configurable.
