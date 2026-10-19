@@ -150,20 +150,21 @@ La metodología seguida para su realización es la siguiente:
 - Como sistema de recompensa, cada vez que el jugador alcanza o supera múltiplos de 100 puntos, recibe una corona visual en la interfaz.
 - Las coronas se van acumulando de manera vertical una encima de otra dentro de una zona designada (un panel UI situado en la zona inferior derecha de la pantalla).
 - Imagen utilizada como recurso para las coronas: [enlace a asset de Supercell](https://fankit.supercell.com/d/BmehSDJrZNff/game-assets-1/show/eyJpZCI6NjA5NTYsInNjb3BlIjoiYXNzZXQ6dmlldyIsInRpbWVzdGFtcCI6IjE3OTIzNjY3MDkifQ:supercell:W0xBKuo_sUKM35eyq8GkLVJSiuqlvjB4C9iOriAvxuI).
+- Nota: la cantidad de puntos necesaria para recibir la recompensa es modificable desde el Inspector para facilitar su personalización.
 
 
-
-## Ejercicio 8: Escena Integrada (Mecánicas de Movimiento, Persecución, UI y Recompensas)
+## Ejercicio 8: Escena Integrada en un Castillo (Mecánicas de Movimiento, Persecución, UI y Recompensas)
 
 - **Demostración en GIF:**
 ![Demostración ejercicio 8](GitImages/Ejercicio08-P04-II.gif)
 
 ### Consideraciones e Implementación
 
-- Se combinan las mecánicas del Ejercicio 4 (aproximación a la caja, activaciones por triggers, persecuciones cruzadas, teletransporte y orientación) con el sistema de puntuación y recompensas en UI de los ejercicios 7 y 8.
+- Se ha construido una escena prototipo que sigue una temática apropiada: un castillo para los soldados. Se disponen a los soldados de cada tipo 'enfrentados' y los soldados amarillos como guardias (siguen siendo IsTrigger). Cada soldado de Tipo1 y Tipo2 tienen configurados distintos objetivos de teletransporte, mira, persecución, etc. siguiendo las normas previamente establecidas para cada tipo.
+- Se combinan las mecánicas del Ejercicio 4 (aproximación a la caja, activaciones por triggers, persecuciones cruzadas, cambios de color de los escudos, teletransporte y orientación) con el sistema de puntuación y recompensas en UI del ejercicio 7.
 - Mientras los humanoides cambian dinámicamente de comportamiento (persiguiendo, teletransportándose o buscando escudos), el jugador colecciona puntos y acumula coronas en pantalla.
 - **Nota importante:** Se desactivó la opción `destroyOnCollect` en los scripts de los escudos para evitar que se destruyan al ser recolectados, previniendo así la pérdida de referencias necesarias para el resto de humanoides. Aquí destaca la utilidad de esta propiedad configurable.
-
+- El castillo fue construido mediante los prefabs del siguiente Unity Asset: [enlace a Dungeon Modular Pack](https://assetstore.unity.com/packages/3d/environments/dungeons/dungeon-modular-pack-295430)
 
 
 ## Ejercicio 9: El Jugador como Objeto Físico
@@ -186,4 +187,9 @@ La metodología seguida para su realización es la siguiente:
 
 - El personaje del jugador es un modelo de humanoide blanco equipado con un colisionador de tipo cápsula (exceptuando el ejercicio 9).
 - Se generaron *prefabs* para los humanoides normales asegurando un comportamiento idéntico y modular en todas las escenas.
+- Modelos de los soldados: [enlace a Mini Legion Footman PBR HP Polyart](https://assetstore.unity.com/packages/3d/characters/humanoids/fantasy/mini-legion-footman-pbr-hp-polyart-86576).
+- Textura de césped: [enlace a la imagen de césped](https://es.pinterest.com/pin/668925350936457709/).
 - Textura de caja utilizada en las pruebas: [enlace a RenderHub Syt Studio](https://www.renderhub.com/syt-studio/box-texture-pbr).
+- Los modelos de los escudos han sido extraídos del siguiente Unity Asset: [enlace a RPG Hero PBR HP Polyart](https://assetstore.unity.com/packages/3d/characters/humanoids/fantasy/rpg-hero-pbr-hp-polyart-121480).
+- Imagen utilizada como recurso para las coronas: [enlace a asset de Supercell](https://fankit.supercell.com/d/BmehSDJrZNff/game-assets-1/show/eyJpZCI6NjA5NTYsInNjb3BlIjoiYXNzZXQ6dmlldyIsInRpbWVzdGFtcCI6IjE3OTIzNjY3MDkifQ:supercell:W0xBKuo_sUKM35eyq8GkLVJSiuqlvjB4C9iOriAvxuI).
+- El castillo fue construido mediante los prefabs del siguiente Unity Asset: [enlace a Dungeon Modular Pack](https://assetstore.unity.com/packages/3d/environments/dungeons/dungeon-modular-pack-295430).
