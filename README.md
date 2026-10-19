@@ -149,7 +149,7 @@ La metodología seguida para su realización es la siguiente:
 
 - Como sistema de recompensa, cada vez que el jugador alcanza o supera múltiplos de 100 puntos, recibe una corona visual en la interfaz.
 - Las coronas se van acumulando de manera vertical una encima de otra dentro de una zona designada (un panel UI situado en la zona inferior derecha de la pantalla).
-- Imagen utilizada como recurso para las coronas: [enlace a asset de Supercell](https://fankit.supercell.com/d/BmehSDJrZNff/game-assets-1/show/eyJpZCI6NjA5NTYsInNjb3BlIjoiYXNzZXQ6dmlldyIsInRpbWVzdGFtcCI6IjE3OTIzNjY3MDkifQ:supercell:W0xBKuo_sUKM35eyq8GkLVJSiuqlvjB4C9iOriAvxuI).
+- Imagen utilizada como recurso para las coronas: [enlace al asset de Supercell](https://fankit.supercell.com/d/BmehSDJrZNff/game-assets-1/show/eyJpZCI6NjA5NTYsInNjb3BlIjoiYXNzZXQ6dmlldyIsInRpbWVzdGFtcCI6IjE3OTIzNjY3MDkifQ:supercell:W0xBKuo_sUKM35eyq8GkLVJSiuqlvjB4C9iOriAvxuI).
 - Nota: la cantidad de puntos necesaria para recibir la recompensa es modificable desde el Inspector para facilitar su personalización.
 
 
