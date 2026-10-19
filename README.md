@@ -105,7 +105,7 @@ La metodología seguida para su realización es la siguiente:
   * Si el jugador se aproxima a la caja a una distancia menor que $X$ -> Los humanoides Tipo 1 y Tipo 2 se teletransportan o comienzan a mirar un objeto preseleccionado, manteniendo el comportamiento que tuvieran previamente (inactivos o persiguiendo humanoides/escudos).
 
 - Como en el ejercicio anterior, en el teletransporte se omite intencionalmente la modificación del eje Y para evitar desplazamientos verticales no deseados.
-- **En el GIF:** Primero nos aproximamos a la caja (configurada como target de aproximación a distancia 4). A continuación, tocamos a un humanoide azul (los rojos se dirigen a sus escudos) y luego al amarillo (los azules inician la persecución al jugador). Finalmente, al tocar a un rojo, los azules se dirigen hacia sus escudos. Se puede apreciar visualmente cómo un muñeco azul mira al jugador (el de la izquierda) y otro mira hacia la caja (el de la derecha). Se observan los cambios de colores de los escudos.
+- **En el GIF:** Primero nos aproximamos a la caja (configurada como target de aproximación a distancia 4). A continuación, tocamos a un humanoide azul (los rojos se dirigen a sus escudos) y luego al amarillo (los azules inician la persecución al jugador). Finalmente, al tocar a un rojo, los azules se dirigen hacia sus escudos. Se puede apreciar visualmente cómo un muñeco azul mira al jugador y otro mira hacia la caja. Se observan los cambios de colores de los escudos.
 
 *Nota: en el ejercicio 8 veremos una muestra de ejecución intercalada del efecto al aproximarse a la caja.*
 
