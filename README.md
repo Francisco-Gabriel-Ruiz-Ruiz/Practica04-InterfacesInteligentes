@@ -143,7 +143,7 @@ La metodología seguida para su realización es la siguiente:
 ## Ejercicio 7: Recompensas Visuales por Puntuación
 
 - **Código desarrollado:**
-  * [Assets/Scripts/Ej7PlayerReward.cs](Assets/Scripts/Scripts/Ej7PlayerReward.cs)
+  * [Assets/Scripts/Ej7PlayerReward.cs](Assets/Scripts/Ej7PlayerReward.cs)
 
 - **Demostración en GIF:**
 ![Demostración ejercicio 7](GitImages/Ejercicio07-P04-II.gif)
